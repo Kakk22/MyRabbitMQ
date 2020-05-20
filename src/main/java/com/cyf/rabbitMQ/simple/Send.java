@@ -1,14 +1,15 @@
 package com.cyf.rabbitMQ.simple;
 
 import com.cyf.rabbitMQ.Utils.ConnectionUtil;
-import com.rabbitmq.client.AMQP;
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
 
 import java.io.IOException;
 import java.util.concurrent.TimeoutException;
 
-/**生产者
+/**
+ * 生产者
+ *
  * @author by cyf
  * @date 2020/5/20.
  */
@@ -24,9 +25,9 @@ public class Send {
         channel.queueDeclare(QUEUE_NAME, false, false, false, null);
 
         String message = "hello queue";
-        System.out.println("message:"+message);
+        System.out.println("message:" + message);
         //消息传入
-        channel.basicPublish("",QUEUE_NAME,null,message.getBytes());
+        channel.basicPublish("", QUEUE_NAME, null, message.getBytes());
 
         channel.close();
         connection.close();
