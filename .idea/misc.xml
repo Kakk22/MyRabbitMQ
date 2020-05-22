@@ -5,6 +5,7 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/boot-rabbitMQ/pom.xml" />
       </list>
     </option>
   </component>

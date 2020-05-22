@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="boot-rabbitMQ" />
         <module name="com.cyf.MyRabbitMQ" />
         <module name="MyRabbitMQ1" />
       </profile>
