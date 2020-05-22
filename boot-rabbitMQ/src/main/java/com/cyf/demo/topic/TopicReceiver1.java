@@ -1,4 +1,4 @@
-package com.cyf.demo.simple;
+package com.cyf.demo.topic;
 
 import org.springframework.amqp.rabbit.annotation.RabbitHandler;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
@@ -9,11 +9,11 @@ import org.springframework.stereotype.Component;
  * @date 2020/5/22.
  */
 @Component
-@RabbitListener(queues = "q_hello")
-public class Receiver {
+@RabbitListener(queues = "q_topic_message")
+public class TopicReceiver1 {
 
     @RabbitHandler
-    public void process(String message){
-        System.out.println(message);
+    public void receiver(String message){
+        System.out.println("Receiver1:"+message);
     }
 }
