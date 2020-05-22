@@ -1,5 +1,6 @@
 package com.cyf.demo;
 
+import com.cyf.demo.fanout.MySend;
 import com.cyf.demo.simple.Send;
 import com.cyf.demo.topic.MagSender;
 import com.cyf.demo.work.Sender;
@@ -16,6 +17,8 @@ class DemoApplicationTests {
     private Sender workSender;
     @Autowired
     private MagSender magSender;
+    @Autowired
+    private MySend mySend;
     @Test
     void helloSimple() {
         sender.send();
@@ -33,5 +36,9 @@ class DemoApplicationTests {
     void topicQueue(){
         magSender.Send1();
         magSender.Send2();
+    }
+    @Test
+    void fanoutQueue(){
+        mySend.send();
     }
 }
